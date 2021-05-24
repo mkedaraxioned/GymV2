@@ -1,0 +1,1035 @@
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Align radios and text inputs with their label */
+input[type=radio] {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type=button],
+input[type=submit],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup {
+  top: -0.7em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* 1.2. Clear Fix
+   ========================== */
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1903px;
+  width: 86.54%;
+  margin: 0 auto;
+}
+
+/*=================================
+  Header styling starts here
+=================================*/
+header {
+  position: relative;
+  z-index: 5;
+}
+header .wrapper {
+  width: 88.14%;
+  padding: 36px 0 38px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 19px;
+  /* hamburger css starts here*/
+  /* hamburger css ends here*/
+}
+header .wrapper a {
+  position: relative;
+  color: #fff;
+  font-size: 18px;
+  text-transform: capitalize;
+  transition: 0.3s ease-in;
+}
+header .wrapper a.active::after {
+  content: " ";
+  width: 50px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  background-color: #fff;
+}
+header .wrapper .contact-btn {
+  padding: 10px 1%;
+  margin-right: 5%;
+  border: 1px solid #69dd0a;
+  border-radius: 5px;
+  color: #69dd0a;
+  font-size: 13px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+header .wrapper .contact-btn:hover {
+  border: 1px solid #000;
+  background-color: #69dd0a;
+  color: #000;
+}
+@media screen and (max-width: 1023px) {
+  header .wrapper .contact-btn {
+    display: none;
+  }
+}
+header .wrapper nav {
+  margin-left: 2.14%;
+  flex-basis: 29.2%;
+  display: flex;
+}
+header .wrapper .navbar {
+  display: flex;
+}
+header .wrapper .navbar li {
+  margin-right: 9.38%;
+}
+header .wrapper .navbar a:hover {
+  padding: 0 4%;
+  background-color: #40b781;
+  color: #000;
+}
+header .wrapper .navbar-right {
+  flex-basis: 8%;
+}
+header .wrapper .navbar-right a {
+  padding: 10px 30%;
+  border: 1px solid #40b781;
+  border-radius: 5px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+header .wrapper .navbar-right-list {
+  display: flex;
+  justify-content: space-between;
+}
+header .wrapper .brand-name a {
+  color: #fff;
+  font-size: 28px;
+  text-indent: -9999px;
+}
+header .wrapper .brand-name img {
+  float: right;
+}
+header .wrapper .menu-bar {
+  display: none;
+}
+header .wrapper .menu-bar {
+  display: none;
+  font-weight: bold;
+}
+@media screen and (max-width: 1023px) {
+  header .wrapper .menu-bar {
+    display: block;
+    float: right;
+  }
+}
+header .wrapper .toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+header .wrapper .toggle-item {
+  padding: 10px 2%;
+}
+header .wrapper .inactive {
+  display: none;
+}
+header .wrapper .active {
+  display: block;
+}
+header .wrapper .toggle:hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header .wrapper .hide {
+  visibility: hidden;
+}
+header .wrapper .show {
+  visibility: visible;
+}
+@media screen and (max-width: 1023px) {
+  header .wrapper .hide-menu-item {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* Seperate Header css starts here */
+  .header-effect {
+    width: 100vw;
+    height: 100vh;
+    background-color: #66a333;
+  }
+
+  .hamburger-effect {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .navbar {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+
+  .menu-bar {
+    display: block;
+    float: right;
+  }
+
+  .hide-menu-item {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    top: 50%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .hamburger-menu li {
+    width: 30%;
+    padding: 10px 10%;
+    margin-bottom: 5px;
+    background-color: rgba(54, 54, 54, 0.8);
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .show-menu-item {
+    display: block;
+  }
+
+  .bars-ico {
+    float: right;
+  }
+
+  nav {
+    flex-basis: 75%;
+  }
+
+  /* Header css ends here */
+}
+@media screen and (max-width: 767px) {
+  .hamburger-menu li {
+    width: 95%;
+  }
+
+  header .wrapper nav {
+    margin-right: 10%;
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 320px) {
+  nav {
+    margin-left: 0;
+  }
+}
+/*=================================
+  Header styling ends here
+=================================*/
+main {
+  background-color: #000;
+  transform: translateY(-200px);
+}
+
+/*=================================
+  section 1 css starts here
+=================================*/
+.section1 .wrapper {
+  width: 100%;
+  position: relative;
+}
+.section1__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .section1__title {
+    top: 70%;
+  }
+}
+.section1__title {
+  font-size: 32px;
+}
+@media screen and (min-width: 320px) {
+  .section1__title {
+    font-size: calc(32px + 77 * ((100vw - 320px) / 1583));
+  }
+}
+@media screen and (min-width: 1903px) {
+  .section1__title {
+    font-size: 109px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section1__img img {
+    height: 450px;
+  }
+}
+
+/*=================================
+  section 1 css ends here
+=================================*/
+/*=================================
+  section 2 css starts here
+=================================*/
+.section2 {
+  background-color: #000;
+}
+.section2 .wrapper {
+  padding: 82px 0 113px;
+}
+.section2__list {
+  width: 58.38%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1023px) {
+  .section2__list {
+    flex-wrap: wrap;
+  }
+}
+.section2__list li {
+  display: flex;
+}
+@media screen and (max-width: 1023px) {
+  .section2__list li {
+    flex-basis: 50%;
+  }
+  .section2__list li:nth-of-type(-n+2) {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section2__list li {
+    flex-basis: 100%;
+  }
+  .section2__list li:nth-of-type(-n+3) {
+    margin-bottom: 25px;
+  }
+}
+.section2 .count {
+  color: #fff;
+  font-size: 30px;
+}
+.section2 .count-title {
+  margin-top: 10px;
+  color: #808080;
+}
+.section2 .counter div {
+  margin-left: 30px;
+}
+
+/*=================================
+  section 2 css ends here
+=================================*/
+/*=================================
+  section 3 css starts here
+=================================*/
+.sec3 {
+  background-color: #000;
+}
+.sec3 .wrapper {
+  width: 58.38%;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .sec3 .wrapper {
+    width: 86.54%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .sec3 .wrapper {
+    flex-wrap: wrap;
+  }
+}
+.sec3__left {
+  flex-basis: 39.87%;
+}
+@media screen and (max-width: 767px) {
+  .sec3__left {
+    margin-bottom: 50px;
+    flex-basis: 100%;
+  }
+}
+.sec3__left__title {
+  width: 70%;
+  margin-bottom: 31px;
+  color: #48d494;
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+@media screen and (max-width: 767px) {
+  .sec3__left__title {
+    width: 100%;
+  }
+}
+.sec3__right {
+  flex-basis: 49.32%;
+}
+@media screen and (max-width: 767px) {
+  .sec3__right {
+    flex-basis: 100%;
+  }
+}
+.sec3 .get-in-touch-btn {
+  padding: 18px 4%;
+  margin-top: 48px;
+  border: none;
+  border-radius: 5px;
+  background: #40b781;
+  color: #000;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.sec--para {
+  color: #867b7b;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/*=================================
+  section 3 css ends here
+=================================*/
+/*=================================
+  section 4 css starts here
+=================================*/
+.sec4 {
+  background-color: #000;
+}
+.sec4 .wrapper {
+  width: 100%;
+  padding-top: 176px;
+}
+.sec4__title {
+  width: 60%;
+  margin-left: 21.07%;
+  margin-bottom: 31px;
+  color: #48d494;
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+@media screen and (max-width: 767px) {
+  .sec4__title {
+    width: 86.54%;
+    margin: 0 auto;
+  }
+}
+.sec4__para {
+  width: 28%;
+  margin-left: 21.07%;
+}
+@media screen and (max-width: 767px) {
+  .sec4__para {
+    width: 86.54%;
+    margin: 0 auto;
+  }
+}
+.sec4 .class-list {
+  margin-top: 64px;
+  display: flex;
+}
+.sec4 .slick-dots li button:before {
+  font-size: 11px;
+  color: #fff;
+  opacity: 1;
+}
+.sec4 .slick-dots li {
+  margin: 0;
+}
+.sec4 .slick-dots li.slick-active button:before {
+  color: #48d494;
+}
+
+/*=================================
+  section 4 css ends here
+=================================*/
+/*=================================
+  section 5 css starts here
+=================================*/
+.sec5 {
+  background-color: #000;
+}
+.sec5 .wrapper {
+  width: 58.38%;
+  padding-top: 247px;
+}
+@media screen and (max-width: 767px) {
+  .sec5 .wrapper {
+    width: 86.54%;
+  }
+}
+.sec5__title {
+  width: 60%;
+  margin-bottom: 31px;
+  color: #48d494;
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.sec5__para {
+  width: 48%;
+}
+@media screen and (max-width: 767px) {
+  .sec5__para {
+    width: 100%;
+  }
+}
+.sec5 .day-filters {
+  margin-top: 62px;
+  display: flex;
+  margin-top: 62px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .sec5 .day-filters {
+    flex-direction: column;
+  }
+}
+.sec5 .tabs:first-of-type {
+  padding: 15px 2%;
+  border-radius: 5px;
+  background-color: #40b781;
+  color: #fff;
+  font-size: 18px;
+}
+.sec5 .tabs {
+  padding: 15px 2%;
+  border-radius: 5px;
+  color: #40b781;
+  font-size: 18px;
+}
+@media screen and (max-width: 767px) {
+  .sec5 .tabs {
+    padding: 15px 15%;
+  }
+}
+.sec5 .schedulelist {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+.sec5 .schedulelist a {
+  color: #40b781;
+  font-size: 18px;
+}
+.sec5 .scheduleitem {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .sec5 .scheduleitem {
+    flex-direction: column;
+  }
+}
+.sec5 .scheduleitem .schedulespan {
+  padding: 20px 0 20px 2%;
+  border: 0.5px solid #808080;
+  border-collapse: collapse;
+}
+.sec5 .scheduleitem .schedulespan:nth-of-type(odd) {
+  flex-basis: 24.52%;
+}
+.sec5 .scheduleitem .schedulespan:nth-of-type(2) {
+  flex-basis: 33.06%;
+}
+.sec5 .scheduleitem .schedulespan:last-of-type {
+  flex-basis: 17.71%;
+  padding-left: 0;
+  text-align: center;
+}
+.sec5 .daylist {
+  margin-top: 47px;
+  color: #808080;
+}
+.sec5 .daylist .dayitem {
+  width: 100%;
+  transition: 0.3s ease-in;
+}
+
+/*=================================
+  section 5 css ends here
+=================================*/
+/*=================================
+  section 6 css starts here
+=================================*/
+.sec6 {
+  background-color: #000;
+}
+.sec6 .wrapper {
+  width: 59%;
+  padding-top: 202px;
+}
+@media screen and (max-width: 767px) {
+  .sec6 .wrapper {
+    width: 86.54%;
+  }
+}
+.sec6__title {
+  width: 60%;
+  margin-bottom: 31px;
+  color: #48d494;
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.sec6__para {
+  width: 48%;
+}
+@media screen and (max-width: 767px) {
+  .sec6__para {
+    width: 100%;
+  }
+}
+.sec6 .memberlist {
+  margin-top: 63px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .sec6 .memberlist {
+    flex-wrap: wrap;
+  }
+}
+.sec6 .memberlist li {
+  flex-basis: 29.79%;
+}
+.sec6 .memberlist li:nth-of-type(2) {
+  margin-top: 50px;
+}
+@media screen and (max-width: 767px) {
+  .sec6 .memberlist li {
+    flex-basis: 100%;
+  }
+  .sec6 .memberlist li:nth-of-type(3) {
+    margin-top: 50px;
+  }
+}
+.sec6 .member-name {
+  margin: 37px 0 12px;
+  font-size: 32px;
+  color: #fff;
+}
+.sec6 .member-profile {
+  color: #393c3c;
+  font-size: 18px;
+}
+.sec6 .member-info {
+  margin-top: 26px;
+}
+
+/*=================================
+  section 6 css ends here
+=================================*/
+/*=================================
+  section 7 css starts here
+=================================*/
+.sec7 {
+  background-color: #000;
+}
+.sec7 .wrapper {
+  width: 58.38%;
+  padding: 202px 0 156px;
+}
+@media screen and (max-width: 767px) {
+  .sec7 .wrapper {
+    width: 86.54%;
+  }
+}
+.sec7__title {
+  width: 60%;
+  margin-bottom: 31px;
+  color: #48d494;
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+@media screen and (max-width: 767px) {
+  .sec7__title {
+    width: 100%;
+  }
+}
+.sec7__para {
+  width: 48%;
+}
+@media screen and (max-width: 767px) {
+  .sec7__para {
+    width: 100%;
+  }
+}
+.sec7 .featurelist {
+  margin-top: 63px;
+  color: #fff;
+}
+.sec7 .featurelist li:not(.slick-dots li) {
+  padding: 70px 66px 86px;
+  margin-right: 30px;
+  background-color: #48d494;
+}
+@media screen and (max-width: 767px) {
+  .sec7 .featurelist li:not(.slick-dots li) {
+    margin-right: 0;
+  }
+}
+.sec7 .featurelist figure {
+  width: 50px;
+}
+.sec7 .featurelist .feature-title {
+  margin-top: 31px;
+  font-size: 25px;
+  font-weight: 700;
+}
+.sec7 .featurelist .feature-para {
+  margin-top: 29px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/*=================================
+  section 7 css ends here
+=================================*/
+/*=================================
+  section 8 css starts here
+=================================*/
+.sec8 {
+  background-color: #121212;
+}
+.sec8 .wrapper {
+  width: 33.1%;
+  padding: 202px 0 99px;
+}
+@media screen and (max-width: 767px) {
+  .sec8 .wrapper {
+    width: 86.54%;
+  }
+}
+.sec8__title {
+  margin-bottom: 31px;
+  color: #48d494;
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.sec8 input, .sec8 textarea {
+  padding: 15px;
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #40b781;
+  font-size: 14px;
+}
+.sec8 .submit-btn {
+  padding: 23px 16%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #48d494;
+  font-size: 11px;
+  font-weight: bold;
+}
+.sec8 .contact-form {
+  margin-top: 55px;
+}
+.sec8 .contact-form > div:not(:nth-of-type(n+4)) {
+  margin-bottom: 20px;
+}
+.sec8 .form-top {
+  display: flex;
+}
+@media screen and (max-width: 1023px) {
+  .sec8 .form-top {
+    flex-direction: column;
+  }
+}
+.sec8 .form-top div {
+  flex-basis: 48%;
+}
+@media screen and (max-width: 1023px) {
+  .sec8 .form-top div:first-of-type {
+    margin-bottom: 20px;
+  }
+}
+.sec8 .form-top input {
+  width: 89%;
+}
+@media screen and (max-width: 1023px) {
+  .sec8 .form-top input {
+    width: 94%;
+  }
+}
+.sec8 .ip-fname {
+  margin-right: 20px;
+}
+@media screen and (max-width: 1023px) {
+  .sec8 .ip-fname {
+    margin-right: 0;
+  }
+}
+.sec8 .ip-subject input,
+.sec8 .ip-email input {
+  width: 94%;
+}
+.sec8 textarea {
+  width: 94%;
+}
+
+/*=================================
+  section 8 css ends here
+=================================*/
+/* Form validation start */
+.hide-element {
+  display: none;
+}
+
+.show-element {
+  display: block;
+}
+
+.span-error.show-element {
+  display: block;
+}
+
+.outline-red {
+  outline: 2px solid #f00;
+}
+
+.span-error {
+  display: none;
+  color: #d13434;
+}
+
+/* form validation end */
+/*=================================
+  Footer styling starts here
+=================================*/
+footer {
+  background-color: #000;
+  transform: translateY(-200px);
+}
+footer .wrapper {
+  width: 58.38%;
+  padding: 123px 0 146px;
+}
+@media screen and (max-width: 767px) {
+  footer .wrapper {
+    width: 86.54%;
+  }
+}
+footer__title {
+  width: 60%;
+  margin-bottom: 31px;
+  color: #48d494;
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+footer__para {
+  width: 48%;
+}
+footer .s-span-error {
+  display: none;
+}
+footer .footer {
+  margin-bottom: 198px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1023px) {
+  footer .footer {
+    flex-wrap: wrap;
+  }
+}
+footer .footer__left, footer .footer__right {
+  flex-basis: 31.69%;
+}
+@media screen and (max-width: 1023px) {
+  footer .footer__left, footer .footer__right {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .footer__left, footer .footer__right {
+    flex-basis: 100%;
+    margin-bottom: 50px;
+  }
+}
+footer .footer__middle {
+  flex-basis: 7.99%;
+}
+@media screen and (max-width: 767px) {
+  footer .footer__middle {
+    margin-bottom: 50px;
+  }
+}
+footer .footer [class$=__title] {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 36px;
+}
+footer .footer__bottom {
+  text-align: center;
+}
+footer a {
+  color: #48d494;
+  font-size: 18px;
+  font-weight: 300;
+}
+footer p.sec--para {
+  font-size: 15px;
+}
+footer .footerlist li {
+  margin-bottom: 20px;
+}
+footer .subscribe-form {
+  margin-top: 23px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  footer .subscribe-form {
+    justify-content: flex-start;
+  }
+}
+footer .subscribe-form .s-form-ip {
+  padding: 14px 36% 14px 8%;
+  border: 2px solid #fff;
+  background-color: #000;
+}
+footer .subscribe-form .s-submit-btn {
+  padding: 16px;
+  border: none;
+  background-color: #48d494;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/*=================================
+  Footer styling ends here
+=================================*/
+
+/*# sourceMappingURL=main.css.map */

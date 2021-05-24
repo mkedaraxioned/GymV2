@@ -1,0 +1,80 @@
+/*=================================
+  Footer styling starts here
+=================================*/
+footer {
+  background-color: $color_dark;
+  transform: translateY(-200px);
+  .wrapper {
+      width: 58.38%;
+      padding: 123px 0 146px;
+      @include media-max(767px) { width: 86.54%; }
+  }
+  &__title {
+    width: 60%;
+    @include sec-title;
+    letter-spacing: 1.5px;
+  }
+  &__para { width: 48%; }
+
+  .s-span-error { display: none; }
+
+  .footer {
+    margin-bottom: 198px;
+    @include flex(null,space-between,null);
+    @include media-max(1023px) { flex-wrap: wrap; }
+    &__left ,
+    &__right { 
+      flex-basis: 31.69%; 
+    @include media-max(1023px) { flex-basis: 50%; }
+    @include media-max(767px) { 
+      flex-basis: 100%; 
+      margin-bottom: 50px;
+    }
+    }
+
+    &__middle { flex-basis: 7.99%; 
+      @include media-max(767px) { margin-bottom: 50px; }
+    }
+    [class$="__title"] { 
+      color: $color_light;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 36px; 
+    }
+
+    &__bottom { text-align: center; }
+    
+  }
+
+  a { 
+    color: $color_lightgreen; 
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  p.sec--para { font-size: 15px; }
+  
+  .footerlist li { margin-bottom: 20px; }
+
+  .subscribe-form { 
+    margin-top: 23px;
+    @include flex(null,space-between,null);
+    @include media-max(767px) { justify-content: flex-start; }
+    .s-form-ip {
+      padding: 14px 36% 14px 8%;
+      border: 2px solid $color_light;
+      background-color: $color_dark;
+    }
+    .s-submit-btn {
+      padding: 16px;
+      border: none;
+      background-color: $color_lightgreen;
+      font-size: 11px;
+      font-weight: 800;
+    }
+  }
+}
+
+/*=================================
+  Footer styling ends here
+=================================*/

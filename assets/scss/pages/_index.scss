@@ -1,0 +1,456 @@
+main {
+  background-color: $color_dark;
+  transform: translateY(-200px);
+}
+
+/*=================================
+  section 1 css starts here
+=================================*/
+$min_width: 320px;
+$max_width: 1903px;
+$min_font: 32px;
+$max_font: 109px;
+
+.section1{
+  .wrapper {
+    width: 100%;
+    position: relative;
+  }
+  &__title {
+    @include center-vertically;
+    @include media-max(767px) { top: 70%; }
+    color: $color_light;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+    font-weight: 700;
+    text-align: center;
+ }
+ @include media-max(767px) {   &__img img { height: 450px; } }
+}
+
+/*=================================
+  section 1 css ends here
+=================================*/
+
+/*=================================
+  section 2 css starts here
+=================================*/
+.section2 {
+  background-color: $color_dark;
+  .wrapper { padding: 82px 0 113px; }
+  &__list {
+    width: 58.38%;
+    margin: 0 auto;
+    @include flex(null,space-between,null);
+    @include media-max(1023px) { flex-wrap: wrap; }
+    li {
+      display: flex;
+      @include media-max(1023px) { 
+        &:nth-of-type(-n+2) { margin-bottom: 25px; }
+        flex-basis: 50%; 
+      }
+      @include media-max(767px) { 
+        &:nth-of-type(-n+3) { margin-bottom: 25px; }
+        flex-basis: 100%; 
+      }
+
+
+      
+      
+    }  
+  }
+  .count { 
+    color: $color_light;
+    font-size: 30px;
+  }
+  .count-title { 
+    margin-top: 10px ;
+    color: $color_lightgray; 
+  }
+
+  .counter {
+    div { margin-left: 30px; }
+  }
+}
+
+
+/*=================================
+  section 2 css ends here
+=================================*/
+
+/*=================================
+  section 3 css starts here
+=================================*/
+
+.sec3 { 
+  background-color: $color_dark;
+  .wrapper {
+    width: 58.38%; 
+    @include media-max(767px) { width: 86.54%; }
+    @include flex(null,space-between,null);
+    @include media-max(767px) { flex-wrap: wrap;}
+
+  }
+  &__left {
+    flex-basis: 39.87%;
+    @include media-max(767px) { 
+      margin-bottom: 50px;
+      flex-basis: 100%;
+    }
+    &__title {
+      width: 70%;
+      @include sec-title;
+      letter-spacing: 1.5px;
+      @include media-max(767px) { width: 100%; }
+    }
+  }
+  &__right { 
+    flex-basis: 49.32%; 
+    @include media-max(767px) { flex-basis: 100%;}
+  }
+
+  .get-in-touch-btn {
+    padding: 18px 4%;
+    margin-top: 48px;
+    border: none;
+    border-radius: 5px;
+    background: $color_green;
+    color: $color_dark;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+  
+}
+
+.sec--para { 
+  color: #867b7b;
+  font-size: 18px;
+  line-height: 1.6;
+}
+/*=================================
+  section 3 css ends here
+=================================*/
+
+/*=================================
+  section 4 css starts here
+=================================*/
+
+.sec4 {
+  background-color: $color_dark;
+  .wrapper { 
+    width: 100%; 
+    padding-top: 176px;
+  }
+  &__title {
+    width: 60%;
+    margin-left: 21.07%;
+    @include sec-title;
+    letter-spacing: 1.5px;
+    @include media-max(767px) { 
+      width: 86.54%; 
+      margin: 0 auto;
+    }
+  }
+  &__para { 
+    width: 28%;
+    margin-left: 21.07%;
+    @include media-max(767px) { 
+      width: 86.54%; 
+      margin: 0 auto;
+    }
+  }
+
+  .class-list { 
+    margin-top: 64px;
+    display: flex; 
+  }
+  .slick-dots li button:before {
+    font-size: 11px;
+    color: $color_light; 
+    opacity: 1;
+  }
+
+  .slick-dots li { margin: 0;  }
+
+  .slick-dots li.slick-active button:before { color: $color_lightgreen; }
+}
+
+/*=================================
+  section 4 css ends here
+=================================*/
+
+/*=================================
+  section 5 css starts here
+=================================*/
+
+.sec5 {
+  background-color: $color_dark;
+  .wrapper { 
+    width: 58.38%;
+    @include media-max(767px) { width: 86.54%; }
+    padding-top: 247px;
+  }
+  &__title {
+    width: 60%;
+    @include sec-title;
+    letter-spacing: 1.5px;
+  }
+  &__para { 
+    width: 48%; 
+    @include media-max(767px) { width: 100%; }
+  }
+
+  .day-filters {
+    margin-top: 62px;
+    display: flex;
+    margin-top: 62px;
+    justify-content: center;
+    align-items: center;
+    color: $color_light;
+    @include media-max(767px) { flex-direction: column; }
+  }
+
+  .tabs:first-of-type {
+    padding: 15px 2%;
+    border-radius: 5px;    
+    background-color: $color_green;
+    color: $color_light;
+    font-size: 18px;
+  }
+
+  .tabs { 
+    padding: 15px 2%;
+    border-radius: 5px;
+    color: $color_green;
+    font-size: 18px;
+    @include media-max(767px) { padding: 15px 15%; }
+  }
+
+  .schedulelist {
+   @include flex(column,null,null );
+   font-size: 18px;
+   a {
+     color: $color_green; 
+     font-size: 18px;
+   }
+  }
+
+  .scheduleitem { 
+    display: flex; 
+    @include media-max(767px) { flex-direction: column; }
+  
+  .schedulespan {  
+    padding: 20px 0 20px 2%;
+    border: .5px solid $color_lightgray;
+    border-collapse: collapse;
+  }  
+
+  .schedulespan:nth-of-type(odd) {  flex-basis: 24.52%; }
+
+  .schedulespan:nth-of-type(2) { flex-basis: 33.06%; }
+
+  .schedulespan:last-of-type { 
+    flex-basis: 17.71%; 
+    padding-left: 0;
+    text-align: center;
+  }
+  
+  }
+
+
+  .daylist { 
+    margin-top: 47px;
+    color: $color_lightgray;
+
+    .dayitem { 
+      width: 100%; 
+      transition: .3s ease-in;
+    }
+
+  }
+}
+
+/*=================================
+  section 5 css ends here
+=================================*/
+
+
+/*=================================
+  section 6 css starts here
+=================================*/
+
+.sec6 {
+  background-color: $color_dark;
+  .wrapper {
+      width: 59%;
+      padding-top: 202px;
+      @include media-max(767px) { width: 86.54%; }
+  }
+  &__title {
+    width: 60%;
+    @include sec-title;
+    letter-spacing: 1.5px;
+  }
+  &__para { 
+    width: 48%; 
+    @include media-max(767px) { width: 100%; }
+  }
+
+  .memberlist {  
+    margin-top: 63px;  
+    @include flex(null,space-between,null);
+    @include media-max(767px) { flex-wrap: wrap; }
+    li {
+       flex-basis: 29.79%; 
+      &:nth-of-type(2) { margin-top: 50px; }
+      @include media-max(767px) { flex-basis: 100%;
+      
+      &:nth-of-type(3) { margin-top: 50px; }  
+      }
+      }
+    
+    
+  }
+
+  .member-name {
+    margin: 37px 0 12px;
+    font-size: 32px;
+    color: $color_light;
+  }
+
+  .member-profile { 
+    color: $color_darkgray;
+    font-size: 18px; 
+  }
+
+  .member-info { 
+    margin-top: 26px;
+   }
+}
+
+
+
+/*=================================
+  section 6 css ends here
+=================================*/
+
+/*=================================
+  section 7 css starts here
+=================================*/
+
+.sec7 {
+  background-color: $color_dark;
+  .wrapper {
+      width: 58.38%;
+      padding: 202px 0 156px;
+      @include media-max(767px) { width: 86.54%; }
+  }
+  &__title {
+    width: 60%;
+    @include sec-title;
+    letter-spacing: 1.5px;
+    @include media-max(767px) { width: 100%; }
+  }
+  &__para { 
+    width: 48%; 
+    @include media-max(767px) { width: 100%; }
+  }
+
+  .featurelist {
+    margin-top: 63px;
+    color: $color_light;
+    li:not(.slick-dots li) { 
+      padding: 70px 66px 86px;
+      margin-right: 30px;
+      background-color: $color_lightgreen;
+      @include media-max(767px) { margin-right: 0; }
+    }
+    figure { width: 50px; }
+
+    .feature-title { 
+      margin-top: 31px;
+      font-size: 25px;
+      font-weight: 700;
+    }
+    .feature-para { 
+      margin-top: 29px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  }
+}
+
+/*=================================
+  section 7 css ends here
+=================================*/
+
+
+/*=================================
+  section 8 css starts here
+=================================*/
+.sec8 {
+  background-color: $color_lightblack;
+  .wrapper {
+      width: 33.10%;
+      padding: 202px 0 99px;
+      @include media-max(767px) { width: 86.54%; }
+  }
+
+  &__title {
+    @include sec-title;
+    letter-spacing: 1.5px;
+  }
+
+  input ,textarea{
+    padding: 15px;
+    border: 1px solid $color_light;
+    background-color: $color_dark;
+    color: $color_green;
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    padding: 23px 16%;
+    margin-top: 10px;
+    border: none; 
+    border-radius: 5px;
+    background-color: $color_lightgreen;
+    font-size: 11px;
+    font-weight: bold;
+  }
+  
+   .contact-form {
+    margin-top: 55px;
+    // span { display: none; }
+    & > div:not(:nth-of-type(n+4)) { margin-bottom: 20px;}
+  }
+
+  .form-top {
+    display: flex;
+    @include media-max(1023px) { flex-direction: column; }
+    div { 
+      flex-basis: 48%; 
+    @include media-max(1023px) {  &:first-of-type{ margin-bottom: 20px; } }
+    }
+    input { 
+      width: 89%; 
+    @include media-max(1023px) { width: 94%; }
+    }
+  }
+
+  .ip-fname { 
+    margin-right: 20px; 
+  @include media-max(1023px) { margin-right: 0; }
+  }
+
+  .ip-subject ,
+  .ip-email {
+    input{ width: 94%; } }
+
+  textarea { width: 94%; }
+}
+
+/*=================================
+  section 8 css ends here
+=================================*/
+
+

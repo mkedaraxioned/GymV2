@@ -1,0 +1,212 @@
+
+/*=================================
+  Header styling starts here
+=================================*/
+header{
+  position: relative;
+  z-index: 5;
+  .wrapper {
+    width: 88.14%;
+    padding:36px 0 38px;
+    @include flex(null,space-between,null);
+    color: $color_light;
+    text-transform: uppercase;
+    font-size: 19px;
+    
+    a {
+      position: relative;
+      color: $color_light;
+      font-size: 18px;
+      text-transform: capitalize;
+      transition: .3s ease-in;
+      &.active::after {
+        content: " ";
+        width: 50px; 
+        height: 2px;
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        background-color: $color_light;
+      }
+    }
+  
+    .contact-btn {
+      padding: 10px 1%;
+      margin-right: 5%;
+      border: 1px solid $color_green2;
+      border-radius: 5px;
+      color: $color_green2;
+      font-size: 13px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: .3s ease-in;
+      &:hover {
+        border: 1px solid $color_dark;
+        background-color: $color_green2;
+        color: $color_dark;
+      }
+
+      @include media-max(1023px) { display: none; }
+    }
+
+    nav { 
+      margin-left: 2.14%;
+      flex-basis: 29.20%;
+      display: flex;
+    }
+    .navbar{
+      display: flex;
+      li {   margin-right: 9.38%; }
+      
+      a:hover
+      {
+        padding: 0 4%;
+        background-color: $color_green;
+        color: $color_dark;
+      
+      }
+                  
+    }
+
+    .navbar-right {    
+      flex-basis: 8%;
+      a {
+        padding: 10px 30%;
+        border: 1px solid $color_green;
+        border-radius: 5px;
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+      
+      &-list {
+        @include flex(null,space-between,null);
+      }
+    }
+    
+
+    .brand-name a {
+      color: $color_light;
+      font-size: 28px;
+      text-indent: -9999px;
+    }
+    .brand-name img {
+      float: right;
+    }
+    
+    .menu-bar { display: none; }
+     /* hamburger css starts here*/
+    .menu-bar {
+      display: none;
+      font-weight: bold;
+      @include media-max(1023px) {        
+          display: block;
+          float: right;          
+      }     
+    }
+    
+    .toggle {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+      
+    .toggle-item {
+      padding: 10px 2%;
+    }
+      
+    .inactive {   display: none; }
+
+    .active {   display: block;   }
+
+    .toggle:hover {  display: -webkit-box;  display: -ms-flexbox;  display: flex; }
+
+    .hide { visibility: hidden;   }
+
+    .show {  visibility: visible;   } 
+         /* hamburger css ends here*/   
+         .hide-menu-item {
+           @include media-max(1023px) {    display: none;    }    
+         }
+  }
+
+}
+
+
+
+@include media-max(1023px) {
+    /* Seperate Header css starts here */
+    .header-effect {
+      width: 100vw;
+      height: 100vh;
+      background-color: $color_green3;
+    }
+  
+    .hamburger-effect {  background-color: rgba(0, 0, 0, 0.9);   }
+  
+    .no-scroll {  overflow: hidden;   }
+  
+    .navbar { -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end;   }
+  
+    .menu-bar {
+      display: block;
+      float: right;
+    }
+  
+    .hide-menu-item {  display: none;   }
+  
+    .hamburger-menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative;
+      top: 50%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+  
+    .hamburger-menu li {
+      width: 30%;
+      padding: 10px 10%;
+      margin-bottom: 5px;
+      background-color: rgba(54, 54, 54, 0.8);
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  
+    .show-menu-item {  display: block;   }
+  
+    .bars-ico {  float: right;  }
+    
+    nav {  flex-basis: 75%;  }
+  
+    
+    /* Header css ends here */
+}
+
+@include media-max(767px) {    
+  .hamburger-menu li { width: 95%; }
+
+  header .wrapper nav {
+    margin-right: 10%;
+    flex-basis: 50%;
+}
+
+}
+
+@include media-max(320px) {    
+  
+  nav { margin-left: 0; }
+}
+
+
+/*=================================
+  Header styling ends here
+=================================*/  
+
+
